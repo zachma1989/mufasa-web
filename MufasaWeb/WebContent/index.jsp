@@ -8,8 +8,7 @@
 </head>
 <body>
 <% System.out.println("hello world"); %>
-<% String x = "hello"; %>
-<%= Engine.getRecommendation() %>
+<%= Engine.testFunc() %>
 
 </body>
 </html>

@@ -10,5 +10,14 @@
 <% System.out.println("hello world"); %>
 <%= Engine.testFunc() %>
 
+
+<form action="RecommenderServlet" method="post">
+
+User ID:
+<input type="text" name="userId">
+<br>
+<input type="submit" value="Submit!">
+</form>
+
 </body>
 </html>

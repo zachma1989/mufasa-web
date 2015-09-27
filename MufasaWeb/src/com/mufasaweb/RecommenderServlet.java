@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/RecommenderServlet")
 public class RecommenderServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -22,17 +23,16 @@ public class RecommenderServlet extends HttpServlet {
      */
     public RecommenderServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		String userId = request.getParameter("userId");
 		
-		// call recommend engine
+		// Call recommending engine
 		List<String> recList = CentralController.getRecommendations(userId);
 		
 		RecListBean b = new RecListBean();
@@ -48,9 +48,9 @@ public class RecommenderServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 		
+		// Just automatically forward to doGet()
+		doGet(request, response);
 		
 	}
 
